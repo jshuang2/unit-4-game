@@ -1,7 +1,7 @@
 // Generate a random number (between 19-120) that will represent the winning number.
 var winningNumber = Math.floor(Math.random() * (120 - 19 + 1)) + 19;
 console.log(winningNumber);
-$("#winningNumber").append(winningNumber);
+$("#winningNumber").text("Winning Number: " + winningNumber);
 // Generate random numbers (between 1-12) for each crystal button
 var randomOne = getRandomNumber();
 console.log(randomOne);
@@ -22,6 +22,8 @@ function getRandomNumber () {
 var scoreCounter = 0;
 var winsCounter = 0;
 var lossesCounter = 0;
+
+$("#currentScore").text(scoreCounter);
 
 // Update player's score counter whenever crystals are clicked
 $("#crystalOne").on("click", function() {
@@ -62,12 +64,12 @@ function winCheck() {
     if (scoreCounter == winningNumber) {
         winsCounter++;
         alert ("You win!");
-        $("#wins").text(winsCounter);
+        $("#wins").text("Wins: " + winsCounter);
         reset ();
     }
     else if (scoreCounter > winningNumber) {
         lossesCounter++;
-        $("#losses").text(lossesCounter);
+        $("#losses").text("Losses: " + lossesCounter);
         alert ("You lose!");
         reset ();
     }
@@ -76,8 +78,11 @@ function winCheck() {
 // Reset the game after win/loss and update win/loss counter
 function reset () {
     scoreCounter = 0;
+    $("#currentScore").text(scoreCounter);
     winningNumber = Math.floor(Math.random() * (120 - 19 + 1)) + 19;
+    $("#winningNumber").text("Winning Number: " + winningNumber);
     console.log(winningNumber);
+
     // Generate random numbers (between 1-12) for each crystal button
     randomOne = getRandomNumber();
     console.log(randomOne);
