@@ -61,6 +61,7 @@ h1 {
     clear: both;
     margin-top: 10px;
     margin-left: 10px;
+    cursor: pointer;
 }
 
 #totalScore {
