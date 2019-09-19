@@ -1,0 +1,40 @@
+.crystal {
+    width: 10rem;
+    height: 10rem;
+}
+
+h1 {
+    background-color: orange;
+    padding: 20px;
+    font-size: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    max-width: 40%;
+    text-align: center;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.container {
+    margin-top: 10px;
+    margin-left: 10px;
+    background-color: lightyellow;
+    max-width: 50%;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+    padding: 20px;
+}
+
+#winningNumber {
+    background-color: green;
+    color: white;
+    padding: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 20%;
+    margin-top: 10px;
+    margin-left: 10px;
+    text-align: center;
+    font-size: 30px;
+}
+

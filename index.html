@@ -9,8 +9,11 @@
     <title>Document</title>
 </head>
 <body>
-    <header><h1>Crystals Collector!</h1></header>
+    <header>
+    <h1>Crystals Collector!</h1>
+    </header>
     
+    <div class="container">
     <p>You will be given a random number at the start of the game.</p>
     <br>
     <p>There are four crystals below. By clicking on a crystal, you will add a specific amount of points to your total score.</p>
@@ -20,6 +23,7 @@
     <p>The value of each crystal is hidden from you until you click on it.</p>
     <br>
     <p>Each time when the game starts, the game will change the values of each crystal.</p>
+    </div>
 
     <div id="winningNumber">Winning Number: </div>
     <p>Wins: </p>
@@ -27,10 +31,10 @@
     <p>Losses: </p>
     <p id="losses"></p>
 
-    <img id="crystalOne" src="assets/images/purple-crystal.jpg" alt="Crystal One">
-    <img id="crystalTwo" src="assets/images/blue-crystal.jpg" alt="Crystal Two">
-    <img id="crystalThree" src="assets/images/green-crystal.jpg" alt="Crystal Three">
-    <img id="crystalFour" src="assets/images/red-crystal.jpg" alt="Crystal Four">
+    <img id="crystalOne" class="crystal" src="assets/images/purple-crystal.jpg" alt="Crystal One">
+    <img id="crystalTwo" class="crystal" src="assets/images/blue-crystal.jpg" alt="Crystal Two">
+    <img id="crystalThree" class="crystal" src="assets/images/green-crystal.jpg" alt="Crystal Three">
+    <img id="crystalFour" class="crystal" src="assets/images/red-crystal.jpg" alt="Crystal Four">
 
     <div id="totalScore">Your total score is:</div>
     <div id="currentScore"></div>
