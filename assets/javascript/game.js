@@ -51,10 +51,12 @@ function winCheck() {
     if (scoreCounter == winningNumber) {
         winsCounter++;
         alert ("You win!");
+        $("#wins").text(winsCounter);
         reset ();
     }
     else if (scoreCounter > winningNumber) {
         lossesCounter--;
+        $("#losses").text(lossesCounter);
         alert ("You lose!");
         reset ();
     }
