@@ -1,6 +1,7 @@
 // Generate a random number (between 19-120) that will represent the winning number.
 var winningNumber = Math.floor(Math.random() * (120 - 19 + 1)) + 19;
 console.log(winningNumber);
+$("#winningNumber").append(winningNumber);
 // Generate random numbers (between 1-12) for each crystal button
 var randomOne = getRandomNumber();
 console.log(randomOne);
@@ -15,6 +16,8 @@ function getRandomNumber () {
     return Math.floor(Math.random() * 12) + 1;
 }
 
+
+
 //Create variable to keep track of the player's score
 var scoreCounter = 0;
 var winsCounter = 0;
@@ -24,23 +27,31 @@ var lossesCounter = 0;
 $("#crystalOne").on("click", function() {
     scoreCounter = scoreCounter + randomOne;
     console.log(scoreCounter);
+    currentScore();
     winCheck();
 });
 $("#crystalTwo").on("click", function () {
     scoreCounter = scoreCounter + randomTwo;
     console.log(scoreCounter);
+    currentScore();
     winCheck();
 });
 $("#crystalThree").on("click", function () {
     scoreCounter = scoreCounter + randomThree;
     console.log(scoreCounter);
+    currentScore();
     winCheck();
 });
 $("#crystalFour").on("click", function () {
     scoreCounter = scoreCounter + randomFour;
     console.log(scoreCounter);
+    currentScore();
     winCheck();
 });
+
+function currentScore () {
+    $("#currentScore").text(scoreCounter);
+}
 
 
 
@@ -55,7 +66,7 @@ function winCheck() {
         reset ();
     }
     else if (scoreCounter > winningNumber) {
-        lossesCounter--;
+        lossesCounter++;
         $("#losses").text(lossesCounter);
         alert ("You lose!");
         reset ();
