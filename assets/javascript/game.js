@@ -17,6 +17,8 @@ function getRandomNumber () {
 
 //Create variable to keep track of the player's score
 var scoreCounter = 0;
+var winsCounter = 0;
+var lossesCounter = 0;
 
 // Update player's score counter whenever crystals are clicked
 $("#crystalOne").on("click", function() {
@@ -47,10 +49,12 @@ $("#crystalFour").on("click", function () {
 // Create "You lose" alert if player's score goes above randomly generated number.
 function winCheck() {
     if (scoreCounter == winningNumber) {
+        winsCounter++;
         alert ("You win!");
         reset ();
     }
     else if (scoreCounter > winningNumber) {
+        lossesCounter--;
         alert ("You lose!");
         reset ();
     }
